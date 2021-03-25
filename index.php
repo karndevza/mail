@@ -1,4 +1,4 @@
-<?php require 'include/init.php';
+<?php //  require 'include/init.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -71,22 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<?php require 'include/header.php'; ?>
+<?php // require 'include/header.php'; ?>
 
-<h2>Send</h2>
-
-<?php if($sent) : ?>
-    <p>Message sent.</p>
-	<button class="btn btn-primary">New send.</button>
-<?php else: ?>
-
-    <?php if (!empty($errors)) : ?>
-        <ul>
-            <?php foreach ($errors as $error) : ?>
-                <li><?= $error ?></li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
 
     <form method="post" id="formContact">
 
@@ -109,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </form>
 
-<?php endif; ?>
+<?php// endif; ?>
 
 
-<?php require 'include/footer.php'; ?>
+<?php //require 'include/footer.php'; ?>
